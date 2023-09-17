@@ -1,4 +1,4 @@
-1.Set-Up for SASS/SCSS
+1.Set-Up for SASS/SCSS (For Windows user)
 
 --Download and Install Node JS
 --Usefull Keywords:-
