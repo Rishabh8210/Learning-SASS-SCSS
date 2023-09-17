@@ -1,0 +1,49 @@
+1.Set-Up for SASS/SCSS
+
+--Download and Install Node JS
+--Usefull Keywords:-
+i. node -v -> Use to check Node JS version. 
+ii. cd (address) -> Use to change the Directory.
+iii. mkdir (Filename) -> Use to create a Folder.
+iv. npm init -> Whenever you want to install any package manager. so, we need to define the use of that package, so that's why we use this command.
+v. cntrl + c -> to stop the process.
+
+2.Steps after installing Node JS.
+
+-First Run and check that Node JS installed successfully
+ use command -> node -v
+-Now create and set the Directory where you want to run or create project.
+ use command -> cd, mkdir
+-Now Initilize the Node Package Manager (npm), he can ask few Ques like package name, version, description, entry point, test command, git repository, keywords, author, licence
+
+-After using (npm init) a package.json file created in that folder and all the provided data is stored in that file.
+
+-Now install SASS in that folder
+ use command -> node-sass --save-dev
+	--save-dev -> because browser doe's not understand SASS, we are using SASS for our own use.
+Note:- Browser only understand plane CSS
+
+After using (node-sass --save-dev), it will take some time to install SASS on your current folder.
+
+-Now set the path of SASS and CSS to the package.json
+	i. Open package.json file and write 
+	   "compile:sass":"node-sass SCSS_folder_path CSS_folder_path"
+	   here,
+		SCSS_folder_path used as input file CSS
+		CSS_folder_path used as output file CSS	
+Note :- you need to write SASS in the SCSS_file then after compiling, it will generate CSS code and write on the output css file automatically.
+
+-Now we need to compile the SCSS file to convert SCSS code to CSS
+ use command -> npm run compile:sass
+
+Note:- Compile every time whenever you edit the scss file.
+
+-Trick :- If you want to compile automatically whenever you save the scss file.
+	i. Open package.json file and write (-w) at the end it means watch every time whenever we save just 	   compile that file.
+	   "compile:sass":"node-sass SCSS_folder_path CSS_folder_path -w"
+	it will automatically compile your scss file whenever you save the scss file.
+
+
+
+
+			
